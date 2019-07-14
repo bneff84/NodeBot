@@ -1,8 +1,7 @@
-let bot = require('./lib/bot.js');
+let NodeBot = require('./lib/NodeBot.js');
 
-let nodebot = new bot({
-    automations: {},
-    actions: require('./actions.js'),
-});
+let config = require('./config.js');
 
-nodebot.start();
+let bot = new NodeBot(config);
+
+bot.start();
